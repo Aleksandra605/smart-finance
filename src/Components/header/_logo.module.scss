@@ -1,0 +1,123 @@
+@import '../../sass/colors';
+
+p {
+  margin: 0;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.txt {
+  display: block;
+}
+
+.logo {
+  display: flex;
+  background-color: $color-background;
+  color: $color-green;
+  position: relative;
+  font-size: 8px;
+  font-weight: 600;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid $color-background-btn;
+  box-shadow: $shadow-input;
+}
+
+.logo__inner {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  box-shadow: -2px -2px 5px white, 2px 2px 5px rgb(145, 145, 145);
+  border-radius: 50%;
+  top: 22%;
+  left: 22%;
+}
+
+.logoElement {
+  height: 23px !important;
+  position: absolute;
+  transform-origin: 0 100%;
+  left: 50%;
+  text-shadow: $shadow-text-dark;
+}
+
+.w1 {
+  @extend .logoElement;
+  transform: rotate(295.5714285714286deg);
+}
+
+.w2 {
+  @extend .logoElement;
+  transform: rotate(320.28571428571433deg);
+}
+
+.w3 {
+  @extend .logoElement;
+  transform: rotate(0deg);
+}
+
+.w4 {
+  @extend .logoElement;
+  transform: rotate(25.714285714285715deg);
+}
+
+.w5 {
+  @extend .logoElement;
+  transform: rotate(51.42857142857143deg);
+}
+
+.w6 {
+  @extend .logoElement;
+  transform: rotate(77.14285714285714deg);
+}
+
+.w7 {
+  @extend .logoElement;
+  transform: rotate(90.85714285714286deg);
+}
+
+.w8 {
+  @extend .logoElement;
+  transform: rotate(114.57142857142858deg);
+}
+
+.w9 {
+  @extend .logoElement;
+  transform: rotate(136.2857142857143deg);
+}
+
+.w10 {
+  @extend .logoElement;
+  transform: rotate(168.00000000000003deg);
+}
+
+.w11 {
+  @extend .logoElement;
+  transform: rotate(198.71428571428575deg);
+}
+
+.w12 {
+  @extend .logoElement;
+  transform: rotate(227.42857142857147deg);
+}
+
+.w13 {
+  @extend .logoElement;
+  transform: rotate(255.14285714285717deg);
+}
+
+.w14 {
+  @extend .logoElement;
+  transform: rotate(282.8571428571429deg);
+}

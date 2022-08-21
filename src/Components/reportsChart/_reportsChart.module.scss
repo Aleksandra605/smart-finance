@@ -1,0 +1,25 @@
+@import '../../sass/colors';
+
+.chartBox {
+  background-color: $color-background;
+  box-shadow: $shadow-form;
+  backdrop-filter: blur(5px);
+  margin-top: 30px;
+  border-radius: 30px;
+
+  @media (min-width: 320px) {
+    padding: 20px 10px 20px 10px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 25px;
+  }
+}
+
+.loaderBox {
+  width: min-content;
+  height: min-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}

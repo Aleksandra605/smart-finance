@@ -1,0 +1,107 @@
+@import '../../sass/colors';
+
+.deleteBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  width: 35px !important;
+  height: 35px !important;
+  outline: none;
+  fill: $color-font;
+  height: 100%;
+  transition: $transition;
+  border-radius: 50%;
+
+  &:hover {
+    fill: $color-red !important;
+    // background-color: $color-background;
+    // box-shadow: $shadow-form;
+  }
+
+  &:focus {
+    box-shadow: $shadow-btn-focus;
+  }
+}
+
+.transactionsList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: 320px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 716px;
+  }
+
+  @media (min-width: 1140px) {
+    margin: 0;
+  }
+}
+
+.transactionCard {
+  border-radius: 30px;
+  color: $color-font;
+  font-weight: 400;
+  fill: $color-font;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px 15px 5px 15px;
+  letter-spacing: 1px;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-form;
+    background-color: $color-background;
+  }
+}
+
+.spanDate {
+  width: 15%;
+}
+
+.spanDescr {
+  width: 30%;
+}
+
+.spanCategory {
+  width: 30%;
+}
+
+.spanAmount {
+  width: 15%;
+}
+
+.spanDelete {
+  width: 10%;
+  display: flex;
+  justify-content: end;
+}
+
+// .card-enter {
+//   opacity: 0;
+//   transform: scale(0.9);
+// }
+
+// .card-enter-active {
+//   opacity: 1;
+//   transform: translateX(0);
+//   transition: opacity 300ms, transform 300ms;
+// }
+
+// .card-exit {
+//   opacity: 1;
+// }
+
+// .card-exit-active {
+//   opacity: 0;
+//   transform: scale(0.9);
+//   transition: opacity 300ms, transform 300ms;
+// }

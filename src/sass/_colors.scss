@@ -1,0 +1,32 @@
+$color-rose: #e22c7e;
+$color-orange: #fd6e00;
+$color-font: #45504b;
+$color-background: #f9f9f9db;
+$color-background-btn: #fbfbfb;
+$color-red: #d6001d;
+$color-green: #2b824f;
+$color-green-yellow: #badc58;
+$color-shadow: #bababa;
+$color-white-shadow: rgba(255, 255, 255, 0.475);
+
+//.........................................................................
+
+$shadow-text-light: 1px 1px 0 white;
+$shadow-text-dark: 1px 1px 1px rgba(0, 0, 0, 0.19);
+$shadow-form: -2px -2px 5px rgba(255, 255, 255, 0.541),
+  3px 3px 5px rgba(0, 0, 0, 0.1);
+$shadow-input: inset 2px 2px 5px $color-shadow, inset -5px -5px 10px white;
+$shadow-input-active: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px white;
+$shadow-btn: -2px -2px 5px $color-white-shadow, 2px 2px 5px $color-shadow;
+$shadow-btn-hover: -1px -1px 3px $color-white-shadow, 1px 1px 3px $color-shadow;
+$shadow-btn-focus: inset -2px -2px 4px white, inset 2px 2px 4px $color-shadow;
+$shadow-btn-next: 3px 3px 5px $color-shadow, -3px -3px 7px #ffffff;
+
+//.........................................................................
+
+$background-convex: linear-gradient(145deg, #f6f6f6d4, #e0e0e0d0);
+$background-concave: linear-gradient(145deg, #cacaca, #f0f0f0);
+
+//.........................................................................
+
+$transition: all 0.2s ease-in-out;

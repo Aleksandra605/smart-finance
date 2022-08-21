@@ -1,0 +1,71 @@
+@import '../../sass/colors';
+
+.div2 {
+  display: flex;
+  background-color: $color-background;
+  box-shadow: $shadow-form;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 30px;
+
+  @media (min-width: 320px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 1060px;
+    max-width: 100%;
+  }
+}
+
+span {
+  text-align: center;
+}
+
+.spanTotalExp {
+  color: $color-red;
+
+  @media (min-width: 320px) {
+    margin: 0;
+    margin-top: 10px;
+  }
+  @media (min-width: 480px) {
+    margin: 0;
+    margin-left: 15px;
+  }
+}
+
+.spanTotalInc {
+  color: $color-green;
+
+  @media (min-width: 320px) {
+    margin: 0;
+    margin-top: 10px;
+  }
+  @media (min-width: 480px) {
+    margin: 0;
+    margin-left: 15px;
+  }
+}
+
+.name {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: $color-font;
+  text-shadow: $shadow-text-dark;
+
+  @media (min-width: 320px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (min-width: 480px) {
+    flex-direction: row;
+  }
+}

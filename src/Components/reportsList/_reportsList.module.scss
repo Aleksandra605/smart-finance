@@ -1,0 +1,46 @@
+@import '../../sass/colors';
+
+.categoriesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: 320px) {
+    justify-content: center;
+  }
+}
+
+.item {
+  font-size: 12px;
+}
+
+.item:not(:last-child) {
+  margin-right: 13px;
+}
+
+.navLink {
+  width: 100px;
+  height: 130px;
+  padding: 8px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  text-decoration: none;
+  color: $color-font;
+  fill: $color-font;
+  text-align: center;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $shadow-btn;
+  }
+
+  &:focus {
+    color: $color-green-yellow;
+    fill: $color-green-yellow;
+    box-shadow: $shadow-btn-focus;
+  }
+}

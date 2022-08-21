@@ -1,0 +1,35 @@
+@import '../../sass/colors';
+
+.form {
+  display: flex;
+  width: 200px;
+  height: 40px;
+}
+
+.input {
+  display: block;
+  text-align: center;
+  width: 50%;
+  background-color: $color-background;
+  box-shadow: $shadow-input-active;
+  font-size: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-input;
+  }
+}
+
+.year {
+  @extend .input;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.month {
+  @extend .input;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}

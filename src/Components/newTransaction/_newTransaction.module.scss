@@ -1,0 +1,183 @@
+@import '../../sass/colors';
+
+.form {
+  display: flex;
+  font-size: 12px;
+  padding: 15px;
+  border-radius: 30px;
+
+  @media (min-width: 320px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 400px) {
+    width: 380px;
+  }
+
+  @media (min-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @media (min-width: 1040px) {
+    flex-direction: row;
+  }
+}
+
+.inputsBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    margin-bottom: 30px;
+    height: 44px;
+  }
+
+  @media (min-width: 1040px) {
+    margin-bottom: 0;
+  }
+}
+
+.input {
+  outline: none !important;
+  text-align: left;
+  height: 44px;
+  color: $color-font;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-shadow: $shadow-input;
+  box-sizing: border-box;
+  transition: $transition;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $color-background;
+  margin-bottom: 10px;
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-input-active;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    height: 100%;
+  }
+}
+
+.dateInput {
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 80px;
+  }
+}
+
+.date {
+  @extend .input;
+
+  @media (min-width: 320px) {
+    border-radius: 30px;
+  }
+  @media (min-width: 768px) {
+    width: 20%;
+    min-width: 140px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.description {
+  @extend .input;
+
+  @media (min-width: 320px) {
+    border-radius: 30px;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
+    border-radius: 0;
+    width: 30%;
+  }
+}
+
+.category {
+  @extend .input;
+
+  @media (min-width: 320px) {
+    border-radius: 30px;
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 0;
+    width: 30%;
+    margin: 0;
+  }
+}
+
+.amount {
+  @extend .input;
+
+  @media (min-width: 320px) {
+    border-radius: 30px;
+  }
+
+  @media (min-width: 768px) {
+    width: 20%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 120px;
+  }
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  min-width: 260px !important;
+
+  @media (min-width: 320px) {
+    height: 44px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 1040px) {
+    margin-left: 15px;
+  }
+}
+
+.btn {
+  text-align: center;
+  width: 125px;
+  cursor: pointer;
+  color: $color-font;
+  position: relative;
+  border: none;
+  border-radius: 30px;
+  background-color: $color-background;
+  text-shadow: $shadow-text-light;
+  box-shadow: $shadow-btn;
+  transition: $transition;
+
+  &:hover {
+    color: $color-rose;
+    box-shadow: $shadow-btn-hover;
+  }
+  &:focus {
+    color: $color-rose;
+    box-shadow: $shadow-input-active;
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../sass/colors';
+
+.header {
+  box-shadow: $shadow-form;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 320px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  box-shadow: $shadow-input;
+  border-radius: 50%;
+
+  @media (min-width: 320px) {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    margin-right: 10px;
+  }
+}
+
+.userMenuBox {
+  display: flex;
+  width: max-content;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-background;
+  box-shadow: $shadow-input;
+  border-radius: 30px;
+  padding-right: 10px;
+}
+
+.userName {
+  color: $color-font;
+  font-weight: 500;
+  font-size: 14px;
+  text-shadow: $shadow-text-dark;
+}
+
+.authContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 320px) {
+    .authorization {
+      width: 100px;
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 270px;
+    font-size: 16px;
+  }
+}
+
+.authNavLink {
+  display: block;
+  text-decoration: none;
+  color: $color-green-yellow;
+}
+
+.authNavLink:hover,
+.authNavLink:focus {
+  color: $color-font;
+  font-size: 17px;
+}
+
+.logOutBtn {
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  border: none;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: $shadow-text-dark;
+  color: $color-green;
+  fill: $color-green;
+  transition: $transition;
+}
+
+.logOutBtn:hover,
+.logOutBtn:focus {
+  color: $color-red;
+  fill: $color-red;
+}

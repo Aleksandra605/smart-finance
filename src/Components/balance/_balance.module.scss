@@ -1,0 +1,102 @@
+@import '../../sass/colors';
+
+.formBalance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 30px;
+
+  @media (min-width: 320px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 18px 10px 18px;
+    width: 280px;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    padding: 10px 28px 10px 28px;
+    flex-direction: row;
+    height: 60px;
+    width: 389px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.label {
+  height: min-content;
+  color: $color-green;
+  font-weight: 500;
+  font-size: 14px;
+  text-shadow: $shadow-text-light;
+
+  @media (min-width: 320px) {
+    margin-bottom: 10px;
+  }
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 25px;
+  }
+}
+
+.input {
+  text-align: center;
+  width: 110px;
+  cursor: pointer;
+  color: $color-font;
+  transition: $transition;
+  position: relative;
+  border-radius: 30px;
+  outline: none;
+  font-weight: 400;
+  background-color: $color-background;
+  box-shadow: $shadow-input;
+
+  &:hover,
+  &:focus {
+    box-shadow: $shadow-input-active;
+  }
+}
+
+.btn {
+  text-align: center;
+  width: 110px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background-color: $color-background-btn;
+  box-shadow: $shadow-btn;
+  text-shadow: $shadow-text-light;
+  color: $color-font;
+  transition: $transition;
+  position: relative;
+
+  &:hover {
+    box-shadow: $shadow-btn-hover;
+    color: $color-green;
+  }
+
+  &:focus {
+    color: $color-green;
+    box-shadow: $shadow-btn-focus;
+  }
+}
+
+.inputBox {
+  @media (min-width: 320px) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6px;
+    height: 40px;
+  }
+
+  @media (min-width: 768px) {
+    margin: 0;
+    height: 100%;
+    width: 270px;
+    justify-content: space-between;
+  }
+}

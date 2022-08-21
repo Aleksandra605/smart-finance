@@ -1,0 +1,15 @@
+@import '../Components/newTransaction/newTransaction.module';
+@import '../Components/balance/balance.module';
+@import '../Components/header/header.module';
+@import './colors';
+@import '../Components/svg-generator/svg.module';
+@import '../Components/transactionsPage/transactionsPage.module';
+@import '../Components/transactionsView/transactionsView.module';
+@import '../Components/transactionsList/transactionsList.module';
+@import '../Components/summary/summaryTable.module';
+
+@import '../Components/reportsChart/reportsChart.module';
+@import '../Components/reportsList/reportsList.module';
+@import '../Components/reportsPage/reportsPage.module';
+@import '../Components/reportsTotalAmounts/totalAmounts.module';
+@import '../views/views.module';
