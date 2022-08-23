@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { Switch } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useRouteMatch, useLocation } from 'react-router-dom';
 import { getCurrentUser } from './redux/auth/auth-operations';
 import { getIsAuthenticated } from './redux/auth/auth-selectors';
 import { connect } from 'react-redux';
@@ -41,13 +41,17 @@ function App({
 }) {
   const lastTab = localStorage.getItem('lastTab');
   const history = useHistory();
+  const { url } = useRouteMatch();
+  const location = useLocation();
+
+  console.log('url >>>', url);
+  console.log(location);
 
   useEffect(() => {
     onGetCurretnUser();
   }, []);
 
   useEffect(() => {
-    console.log('First render');
     if (isAuthenticated) {
       history.push(lastTab);
     }
