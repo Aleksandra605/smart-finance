@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { Switch } from 'react-router-dom';
-// import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { getCurrentUser } from './redux/auth/auth-operations';
 import { getIsAuthenticated } from './redux/auth/auth-selectors';
 import { connect } from 'react-redux';
@@ -40,20 +40,20 @@ function App({
   incomes,
 }) {
   const lastTab = localStorage.getItem('lastTab');
-  // const history = useHistory();
+  const history = useHistory();
 
   useEffect(() => {
     onGetCurretnUser();
   }, []);
 
-  // useEffect(() => {
-  //   console.log('First render');
-  //   if (isAuthenticated) {
-  //     history.push(lastTab);
-  //   }
-  //   history.push('/login');
-  //   /*eslint-disable */
-  // }, []);
+  useEffect(() => {
+    console.log('First render');
+    if (isAuthenticated) {
+      history.push(lastTab);
+    }
+    history.push('/login');
+    /*eslint-disable */
+  }, []);
 
   useEffect(() => {
     if (isAuthenticated) {
