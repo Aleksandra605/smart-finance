@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Smart-finance/static/css/main.e9e7b106.css",
-    "main.js": "/Smart-finance/static/js/main.3254ced4.js",
+    "main.js": "/Smart-finance/static/js/main.778bf444.js",
     "static/css/34.c34b810e.chunk.css": "/Smart-finance/static/css/34.c34b810e.chunk.css",
     "static/js/34.13116cac.chunk.js": "/Smart-finance/static/js/34.13116cac.chunk.js",
     "static/css/451.c34b810e.chunk.css": "/Smart-finance/static/css/451.c34b810e.chunk.css",
     "static/js/451.030ca8d4.chunk.js": "/Smart-finance/static/js/451.030ca8d4.chunk.js",
     "static/css/385.20ef54f7.chunk.css": "/Smart-finance/static/css/385.20ef54f7.chunk.css",
-    "static/js/385.a2e50001.chunk.js": "/Smart-finance/static/js/385.a2e50001.chunk.js",
+    "static/js/385.a1fb6eb8.chunk.js": "/Smart-finance/static/js/385.a1fb6eb8.chunk.js",
     "static/css/882.6d1cb143.chunk.css": "/Smart-finance/static/css/882.6d1cb143.chunk.css",
     "static/js/882.579a2fa1.chunk.js": "/Smart-finance/static/js/882.579a2fa1.chunk.js",
     "static/js/787.be175502.chunk.js": "/Smart-finance/static/js/787.be175502.chunk.js",
@@ -20,13 +20,13 @@
     "static/media/WallpaperDog-20498425.jpg": "/Smart-finance/static/media/WallpaperDog-20498425.abde6f45162046e2170f.jpg",
     "index.html": "/Smart-finance/index.html",
     "main.e9e7b106.css.map": "/Smart-finance/static/css/main.e9e7b106.css.map",
-    "main.3254ced4.js.map": "/Smart-finance/static/js/main.3254ced4.js.map",
+    "main.778bf444.js.map": "/Smart-finance/static/js/main.778bf444.js.map",
     "34.c34b810e.chunk.css.map": "/Smart-finance/static/css/34.c34b810e.chunk.css.map",
     "34.13116cac.chunk.js.map": "/Smart-finance/static/js/34.13116cac.chunk.js.map",
     "451.c34b810e.chunk.css.map": "/Smart-finance/static/css/451.c34b810e.chunk.css.map",
     "451.030ca8d4.chunk.js.map": "/Smart-finance/static/js/451.030ca8d4.chunk.js.map",
     "385.20ef54f7.chunk.css.map": "/Smart-finance/static/css/385.20ef54f7.chunk.css.map",
-    "385.a2e50001.chunk.js.map": "/Smart-finance/static/js/385.a2e50001.chunk.js.map",
+    "385.a1fb6eb8.chunk.js.map": "/Smart-finance/static/js/385.a1fb6eb8.chunk.js.map",
     "882.6d1cb143.chunk.css.map": "/Smart-finance/static/css/882.6d1cb143.chunk.css.map",
     "882.579a2fa1.chunk.js.map": "/Smart-finance/static/js/882.579a2fa1.chunk.js.map",
     "787.be175502.chunk.js.map": "/Smart-finance/static/js/787.be175502.chunk.js.map",
@@ -39,6 +39,6 @@
   },
   "entrypoints": [
     "static/css/main.e9e7b106.css",
-    "static/js/main.3254ced4.js"
+    "static/js/main.778bf444.js"
   ]
 }
