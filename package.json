@@ -2,7 +2,7 @@
   "name": "smart_finance",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Aleksandra605.github.io/Smart-finance",
+  "homepage": "https://Aleksandra605.github.io/smart-finance",
   "dependencies": {
     "@date-io/date-fns": "^2.13.1",
     "@emotion/react": "^11.8.1",
