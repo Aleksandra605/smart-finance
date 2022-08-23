@@ -16,7 +16,7 @@ function TransactionsPage() {
     <section className={s.transactions__section}>
       <div className={s.balance__container}>
         <Balance />
-        <Link to="reports" className={s.linkToReports}>
+        <Link to="/reports" className={s.linkToReports}>
           Reports
           <SvgGenerator name="reports icon" />
         </Link>
