@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { Switch } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { getCurrentUser } from './redux/auth/auth-operations';
 import { getIsAuthenticated } from './redux/auth/auth-selectors';
 import { connect } from 'react-redux';
@@ -24,7 +24,7 @@ import Loader from './Components/loader1/Loader';
 const SignUp = lazy(() => import('./views/signup/SignUpView'));
 const Login = lazy(() => import('./views/login/LoginView'));
 const TransactionsPage = lazy(() =>
-  import('./Components/transactionsPage/TransactionsPage')
+  import('./Components/transactionsPage/TransactionsPage'),
 );
 const ReportsPage = lazy(() => import('./Components/reportsPage/ReportsPage'));
 
@@ -40,19 +40,20 @@ function App({
   incomes,
 }) {
   const lastTab = localStorage.getItem('lastTab');
-  const history = useHistory();
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      history.push(lastTab);
-    }
-    history.push('/login');
-    /*eslint-disable */
-  }, []);
+  // const history = useHistory();
 
   useEffect(() => {
     onGetCurretnUser();
   }, []);
+
+  // useEffect(() => {
+  //   console.log('First render');
+  //   if (isAuthenticated) {
+  //     history.push(lastTab);
+  //   }
+  //   history.push('/login');
+  //   /*eslint-disable */
+  // }, []);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -85,8 +86,7 @@ function App({
             exact
             path="/"
             restricted
-            // redirectTo={isAuthenticated ? lastTab : '/login'}
-            redirectTo="/login"
+            redirectTo={isAuthenticated ? lastTab : '/login'}
             component={Login}
           />
           <PublicRoute
@@ -98,7 +98,6 @@ function App({
           <PublicRoute
             path="/login"
             restricted
-            // redirectTo={'/transactions'}
             redirectTo={lastTab ? lastTab : '/transactions'}
             component={Login}
           />
@@ -119,13 +118,13 @@ function App({
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   isAuthenticated: getIsAuthenticated(state),
   expenses: getExpenses(state),
   incomes: getIncomes(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   onGetCurretnUser: () => {
     return dispatch(getCurrentUser());
   },
