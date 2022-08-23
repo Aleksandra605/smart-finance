@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Router basename="/Smart-finance/">
+        <Router basename="/Smart-finance">
           <App />
         </Router>
       </PersistGate>
