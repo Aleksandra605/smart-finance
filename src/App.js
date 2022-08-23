@@ -44,24 +44,16 @@ function App({
   const { url } = useRouteMatch();
   const location = useLocation();
   
-    useEffect(() => {
-      console.log('history', history);
-     console.log('url >>>', url);
-  console.log(location);
-  });
-
- 
-
-  useEffect(() => {
+ useEffect(() => {
     onGetCurretnUser();
   }, []);
 
    useEffect(() => {
     
      if (isAuthenticated) {
-       history.push(lastTab);
+      history.push(location.pathname + lastTab);
      }
-     history.push('/login');
+     history.push(location.pathname + '/login');
      /*eslint-disable */
    }, []);
 
