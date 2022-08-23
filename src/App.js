@@ -43,9 +43,13 @@ function App({
     const history = useHistory();
   const { url } = useRouteMatch();
   const location = useLocation();
-
-  console.log('url >>>', url);
+  
+    useEffect(() => {
+     console.log('url >>>', url);
   console.log(location);
+  });
+
+ 
 
   useEffect(() => {
     onGetCurretnUser();
