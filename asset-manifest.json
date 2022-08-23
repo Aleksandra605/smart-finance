@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Smart-finance/static/css/main.e9e7b106.css",
-    "main.js": "/Smart-finance/static/js/main.b4dca933.js",
+    "main.js": "/Smart-finance/static/js/main.675b472f.js",
     "static/css/34.c34b810e.chunk.css": "/Smart-finance/static/css/34.c34b810e.chunk.css",
     "static/js/34.13116cac.chunk.js": "/Smart-finance/static/js/34.13116cac.chunk.js",
     "static/css/451.c34b810e.chunk.css": "/Smart-finance/static/css/451.c34b810e.chunk.css",
@@ -20,7 +20,7 @@
     "static/media/WallpaperDog-20498425.jpg": "/Smart-finance/static/media/WallpaperDog-20498425.abde6f45162046e2170f.jpg",
     "index.html": "/Smart-finance/index.html",
     "main.e9e7b106.css.map": "/Smart-finance/static/css/main.e9e7b106.css.map",
-    "main.b4dca933.js.map": "/Smart-finance/static/js/main.b4dca933.js.map",
+    "main.675b472f.js.map": "/Smart-finance/static/js/main.675b472f.js.map",
     "34.c34b810e.chunk.css.map": "/Smart-finance/static/css/34.c34b810e.chunk.css.map",
     "34.13116cac.chunk.js.map": "/Smart-finance/static/js/34.13116cac.chunk.js.map",
     "451.c34b810e.chunk.css.map": "/Smart-finance/static/css/451.c34b810e.chunk.css.map",
@@ -39,6 +39,6 @@
   },
   "entrypoints": [
     "static/css/main.e9e7b106.css",
-    "static/js/main.b4dca933.js"
+    "static/js/main.675b472f.js"
   ]
 }
