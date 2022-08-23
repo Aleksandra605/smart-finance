@@ -50,7 +50,7 @@ function App({
     if (isAuthenticated) {
       history.push(lastTab);
     }
-    history.push('/login');
+    history.push('login');
     /*eslint-disable */
   }, []);
 
@@ -62,7 +62,7 @@ function App({
     if (isAuthenticated) {
       history.push(lastTab);
     }
-    history.push('/login');
+    history.push('login');
     /*eslint-disable */
   }, []);
 
@@ -97,30 +97,30 @@ function App({
             exact
             path="/"
             restricted
-            redirectTo={isAuthenticated ? lastTab : '/login'}
+            redirectTo={isAuthenticated ? lastTab : 'login'}
             component={Login}
           />
           <PublicRoute
-            path="/signup"
+            path="signup"
             restricted
-            redirectTo="/login"
+            redirectTo="login"
             component={SignUp}
           />
           <PublicRoute
-            path="/login"
+            path="login"
             restricted
-            redirectTo={lastTab ? lastTab : '/transactions'}
+            redirectTo={lastTab ? lastTab : 'transactions'}
             component={Login}
           />
 
           <PrivateRoute
-            path="/transactions"
-            redirectTo="/login"
+            path="transactions"
+            redirectTo="login"
             component={TransactionsPage}
           />
           <PrivateRoute
-            path="/reports"
-            redirectTo="/login"
+            path="reports"
+            redirectTo="login"
             component={ReportsPage}
           />
         </Switch>
