@@ -45,6 +45,7 @@ function App({
   const location = useLocation();
   
     useEffect(() => {
+      console.log('history', history);
      console.log('url >>>', url);
   console.log(location);
   });
