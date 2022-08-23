@@ -23,6 +23,3 @@ ReactDOM.render(
 );
 
 reportWebVitals();
-
-// client id: 811627433312-n1bbpbtdhdb7o1g43qr4s4fp2of9q4pm.apps.googleusercontent.com
-// client secret: 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

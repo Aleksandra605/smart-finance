@@ -55,6 +55,18 @@ function App({
   }, []);
 
   useEffect(() => {
+    onGetCurretnUser();
+  }, []);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push(lastTab);
+    }
+    history.push('/login');
+    /*eslint-disable */
+  }, []);
+
+  useEffect(() => {
     if (isAuthenticated) {
       fetchSummaryList();
       transactionsItems();
