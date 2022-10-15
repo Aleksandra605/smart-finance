@@ -1,7 +1,13 @@
 body {
-  /* background-image: url(./images/hd-wallpaper-gd07bb0383_1920.jpg); */
-  background-image: url(/public/images/WallpaperDog-20498425.jpg);
-  background-size: 100% auto;
+  /* background-image: url(/public/images/WallpaperDog-20498425.jpg); */
+  /* background: rgb(229, 229, 255); */
+  /* background: radial-gradient(
+    circle,
+    rgba(229, 229, 255, 0.8552463221616772) 0%,
+    rgba(232, 232, 243, 0.9364788151588761) 79%
+  ); */
+  background-color: #e7eef7;
+  /* background-size: 100% auto; */
   font-family: 'Montserrat', sans-serif !important;
   letter-spacing: 1px;
   background-size: cover;

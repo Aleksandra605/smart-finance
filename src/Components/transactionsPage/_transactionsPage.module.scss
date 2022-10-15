@@ -48,17 +48,16 @@
   width: 120px;
   padding-left: 6px;
   padding-right: 6px;
-  border-radius: 30px;
-  color: white;
-  fill: white;
+  border-radius: $border-radius;
+  color: $color-violet;
+  fill: $color-violet;
   font-size: 12px;
   font-weight: 500;
   transition: $transition;
   text-shadow: $shadow-text-dark;
 
   &:hover {
-    color: $color-rose;
-    fill: $color-rose;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.315);
   }
 
   @media (min-width: 320px) {

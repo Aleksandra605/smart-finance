@@ -42,8 +42,8 @@
   padding-right: 5px;
   width: 150px;
   height: 40px;
-  border-radius: 30px;
-  background-color: $color-background-btn;
+  border-radius: $border-radius;
+  background-color: $color-background;
   box-shadow: $shadow-input;
 
   @media (min-width: 320px) {
@@ -91,7 +91,11 @@
   transition: $transition;
 
   &:hover {
-    fill: $color-rose;
+    fill: $color-violet;
+    box-shadow: $shadow-btn;
+  }
+
+  &:active {
     box-shadow: $shadow-input-active;
   }
 }
@@ -103,18 +107,16 @@
   text-decoration: none;
   height: 40px;
   width: 150px;
-  border-radius: 30px;
-  color: white;
-  fill: white;
+  border-radius: $border-radius;
+  color: $color-violet;
+  fill: $color-violet;
   font-size: 12px;
   font-weight: 500;
   transition: $transition;
   text-shadow: $shadow-text-dark;
 
-  &:hover,
-  &:focus {
-    color: $color-rose;
-    fill: $color-rose;
+  &:hover {
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.315);
   }
 
   @media (min-width: 320px) {
@@ -130,7 +132,7 @@
   background-color: $color-background;
   box-shadow: $shadow-form;
   backdrop-filter: blur(5px);
-  border-radius: 30px;
+  border-radius: $border-radius;
   display: flex;
   flex-direction: column;
   align-items: center;

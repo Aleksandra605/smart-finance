@@ -11,11 +11,12 @@ const UserMenu = ({ name, logout }) => {
   if (viewportWidth > 767) {
     return (
       <div className={s.userMenuBox}>
-        <img
+        <SvgGenerator name="profile" />
+        {/* <img
           src="/images/defaultAvatar.png"
           alt="User avatar"
           className={s.avatar}
-        />
+        /> */}
         <span className={s.userName}>{name}</span>
         <button onClick={logout} className={s.logOutBtn}>
           Logout
@@ -39,7 +40,7 @@ const UserMenu = ({ name, logout }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   name: getUser(state).name,
   avatar: getUser(state).avatarURL,
 });

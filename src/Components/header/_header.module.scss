@@ -3,8 +3,8 @@
 .header {
   box-shadow: $shadow-form;
   display: flex;
-  padding-left: 50px;
-  padding-right: 50px;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
   height: 55px;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,6 @@
 .avatar {
   width: 32px;
   height: 32px;
-  box-shadow: $shadow-input;
   border-radius: 50%;
 
   @media (min-width: 320px) {
@@ -47,8 +46,8 @@
   justify-content: space-between;
   align-items: center;
   background-color: $color-background;
-  box-shadow: $shadow-input;
-  border-radius: 30px;
+  box-shadow: $shadow-btn;
+  border-radius: $border-radius;
   padding-right: 10px;
 }
 
@@ -80,7 +79,7 @@
 .authNavLink {
   display: block;
   text-decoration: none;
-  color: $color-green-yellow;
+  color: $color-violet;
 }
 
 .authNavLink:hover,
@@ -99,9 +98,15 @@
   font-size: 14px;
   font-weight: 500;
   text-shadow: $shadow-text-dark;
-  color: $color-green;
-  fill: $color-green;
+  color: $color-font;
+  fill: $color-font;
   transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-violet;
+    fill: $color-violet;
+  }
 }
 
 .logOutBtn:hover,

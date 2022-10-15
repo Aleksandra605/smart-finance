@@ -13,14 +13,13 @@
   height: 100%;
   transition: $transition;
   border-radius: 50%;
+  position: relative;
 
   &:hover {
     fill: $color-red !important;
-    // background-color: $color-background;
-    // box-shadow: $shadow-form;
   }
 
-  &:focus {
+  &:active {
     box-shadow: $shadow-btn-focus;
   }
 }
@@ -45,7 +44,7 @@
 }
 
 .transactionCard {
-  border-radius: 30px;
+  border-radius: $border-radius;
   color: $color-font;
   font-weight: 400;
   fill: $color-font;
@@ -55,7 +54,7 @@
   padding: 5px 15px 5px 15px;
   letter-spacing: 1px;
   transition: $transition;
-
+  text-shadow: $shadow-text-dark;
   &:hover,
   &:focus {
     box-shadow: $shadow-form;
@@ -77,12 +76,13 @@
 
 .spanAmount {
   width: 15%;
+  color: $color-violet;
 }
 
 .spanDelete {
   width: 10%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 // .card-enter {

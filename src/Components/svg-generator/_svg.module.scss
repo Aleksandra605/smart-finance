@@ -1,5 +1,14 @@
 @import '../../sass/colors';
 
+.profile {
+  fill: $color-violet !important;
+  width: 32px;
+  height: 32px;
+  box-shadow: $shadow-btn;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 .svgIcon {
   width: 56px !important;
   height: 56px !important;
@@ -14,7 +23,6 @@
 }
 
 .svgArrows {
-  // fill: $color-font !important;
   padding: 6px;
   width: 20px;
   height: 22px;
@@ -42,6 +50,9 @@ path {
 
 .deleteIcon {
   display: block;
-  width: 20px;
-  height: 20px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 19%;
+  left: 24%;
 }

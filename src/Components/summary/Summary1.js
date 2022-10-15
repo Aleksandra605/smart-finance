@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 let selectedIndex = 0;
 
 function Summary({ data }) {
-  const [yearsList, setYearsList] = useState(data.map((el) => el[0]));
+  const [yearsList, setYearsList] = useState(data.map(el => el[0]));
   const [currentYear, setCurrentYear] = useState(yearsList[0]);
   const [items, setItems] = useState(data[0][1]);
 
@@ -21,13 +21,13 @@ function Summary({ data }) {
 
   useEffect(() => {
     selectedIndex = 0;
-    setYearsList(data.map((el) => el[0]));
+    setYearsList(data.map(el => el[0]));
     setCurrentYear(data[0][0]);
     return setItems(data[0][1]);
   }, [data]);
 
   useEffect(() => {
-    setItems(data.find((el) => el[0] === currentYear)[1]);
+    setItems(data.find(el => el[0] === currentYear)[1]);
   }, [currentYear]);
 
   //......Navigation buttons...................................................................
@@ -66,17 +66,13 @@ function Summary({ data }) {
       </div>
 
       <ul className={s.list}>
-        {items.map((item) => (
+        {items.map(item => (
           <li key={item[0]} className={s.item}>
             <span className={s.spanMonth}>{item[0]}</span>
             {location.pathname === '/transactions/expenses' ? (
-              <span className={s.spanAmount} style={{ color: '#d6001d' }}>
-                - {item[1]}
-              </span>
+              <span className={s.spanAmount}>- {item[1]}</span>
             ) : (
-              <span className={s.spanAmount} style={{ color: '#2b824f' }}>
-                + {item[1]}
-              </span>
+              <span className={s.spanAmount}>+ {item[1]}</span>
             )}
           </li>
         ))}
@@ -85,7 +81,7 @@ function Summary({ data }) {
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   summaryExpenses: getSummaryExpenses(state),
   summaryIncomes: getSummaryIncomes(state),
 });

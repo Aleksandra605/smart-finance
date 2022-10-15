@@ -85,6 +85,7 @@ function App({
   return (
     <>
       <Header />
+
       <Suspense
         fallback={
           <div className="loaderBox">

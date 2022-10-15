@@ -13,11 +13,7 @@
 }
 
 .item {
-  font-size: 12px;
-}
-
-.item:not(:last-child) {
-  margin-right: 13px;
+  margin: 10px;
 }
 
 .navLink {
@@ -32,15 +28,23 @@
   color: $color-font;
   fill: $color-font;
   text-align: center;
+  box-shadow: $shadow-btn;
   transition: $transition;
 
   &:hover {
-    box-shadow: $shadow-btn;
+    fill: $color-violet;
+    color: $color-violet;
+    box-shadow: $shadow-btn-hover;
   }
 
   &:focus {
-    color: $color-green-yellow;
-    fill: $color-green-yellow;
     box-shadow: $shadow-btn-focus;
+    color: $color-violet;
+    fill: $color-violet;
   }
+}
+
+.text {
+  color: $color-font;
+  text-shadow: $shadow-text-dark;
 }

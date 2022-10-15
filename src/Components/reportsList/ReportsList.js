@@ -7,6 +7,7 @@ import {
 } from '../../redux/reports/reports-selectors';
 import { connect } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { color } from '@mui/system';
 
 function ReportsList({
   year,
@@ -18,8 +19,8 @@ function ReportsList({
 }) {
   const [items, setItems] = useState(
     expensesReports
-      .find((el) => el[0] === year)?.[1]
-      ?.find((el) => el[0] === month)?.[1]
+      .find(el => el[0] === year)?.[1]
+      ?.find(el => el[0] === month)?.[1],
   );
 
   const location = useLocation();
@@ -28,14 +29,14 @@ function ReportsList({
   useEffect(() => {
     if (transactionType === 'EXPENSES') {
       const itemsListExp = expensesReports
-        .find((el) => el[0] === year)?.[1]
-        ?.find((el) => el[0] === month)?.[1];
+        .find(el => el[0] === year)?.[1]
+        ?.find(el => el[0] === month)?.[1];
       return setItems(itemsListExp);
     }
 
     const itemsListInc = incomesReports
-      .find((el) => el[0] === year)?.[1]
-      ?.find((el) => el[0] === month)?.[1];
+      .find(el => el[0] === year)?.[1]
+      ?.find(el => el[0] === month)?.[1];
     return setItems(itemsListInc);
 
     /*eslint-disable */
@@ -47,7 +48,7 @@ function ReportsList({
     <>
       <ul className={s.categoriesList}>
         {items !== undefined ? (
-          Object.entries(items).map((el) => {
+          Object.entries(items).map(el => {
             return (
               <li
                 id={el[0]}
@@ -70,14 +71,16 @@ function ReportsList({
             );
           })
         ) : (
-          <p>{`You don't have ${transactionType.toLowerCase()} this month`}</p>
+          <p
+            className={s.text}
+          >{`You don't have ${transactionType.toLowerCase()} this month`}</p>
         )}
       </ul>
     </>
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   expensesReports: getExpensesReports(state),
   incomesReports: getIncomesReports(state),
 });

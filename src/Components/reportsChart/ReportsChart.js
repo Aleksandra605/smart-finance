@@ -15,7 +15,6 @@ import axios from 'axios';
 import Loader from '../loader1/Loader';
 import { useLocation } from 'react-router-dom';
 
-// axios.defaults.baseURL = 'http://localhost:3001/api';
 axios.defaults.baseURL = 'https://smart1finance.herokuapp.com/api';
 
 function ReportsChart() {
@@ -34,7 +33,7 @@ function ReportsChart() {
     BarElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
   );
 
   const options = {
@@ -55,15 +54,15 @@ function ReportsChart() {
     axios
       .post('/transactions/reports_by_category', { year, month, category })
       .then(({ data }) => {
-        const y = data.reportByCategory.map((el) => el[0]);
+        const y = data.reportByCategory.map(el => el[0]);
 
         setLabels(y);
 
-        const x = data.reportByCategory.map((el) => el[1]);
+        const x = data.reportByCategory.map(el => el[1]);
 
         return setAmounts(x);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
 
     return () => {
       setLabels(null);

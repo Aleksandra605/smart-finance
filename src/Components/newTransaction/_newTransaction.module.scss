@@ -4,7 +4,7 @@
   display: flex;
   font-size: 12px;
   padding: 15px;
-  border-radius: 30px;
+  border-radius: $border-radius;
 
   @media (min-width: 320px) {
     flex-direction: column;
@@ -82,7 +82,7 @@
   @extend .input;
 
   @media (min-width: 320px) {
-    border-radius: 30px;
+    border-radius: $border-radius;
   }
   @media (min-width: 768px) {
     width: 20%;
@@ -96,7 +96,7 @@
   @extend .input;
 
   @media (min-width: 320px) {
-    border-radius: 30px;
+    border-radius: $border-radius;
   }
 
   @media (min-width: 768px) {
@@ -110,7 +110,7 @@
   @extend .input;
 
   @media (min-width: 320px) {
-    border-radius: 30px;
+    border-radius: $border-radius;
   }
 
   @media (min-width: 768px) {
@@ -124,7 +124,7 @@
   @extend .input;
 
   @media (min-width: 320px) {
-    border-radius: 30px;
+    border-radius: $border-radius;
   }
 
   @media (min-width: 768px) {
@@ -166,18 +166,18 @@
   color: $color-font;
   position: relative;
   border: none;
-  border-radius: 30px;
+  border-radius: $border-radius;
   background-color: $color-background;
   text-shadow: $shadow-text-light;
   box-shadow: $shadow-btn;
   transition: $transition;
 
   &:hover {
-    color: $color-rose;
+    color: $color-violet;
     box-shadow: $shadow-btn-hover;
   }
-  &:focus {
-    color: $color-rose;
+  &:active {
+    color: $color-violet;
     box-shadow: $shadow-input-active;
   }
 }

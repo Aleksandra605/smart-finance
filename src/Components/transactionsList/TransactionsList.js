@@ -8,7 +8,7 @@ function TransactionsList({ data, onDelete }) {
   return (
     <>
       <ul className={s.transactionsList}>
-        {data.map((item) => {
+        {data.map(item => {
           const { amount, category, description, _id, date } = item;
           return (
             <li key={_id} className={s.transactionCard}>
@@ -16,13 +16,9 @@ function TransactionsList({ data, onDelete }) {
               <span className={s.spanDescr}>{description}</span>
               <span className={s.spanCategory}>{category}</span>
               {location.pathname === '/transactions/expenses' ? (
-                <span className={s.spanAmount} style={{ color: '#d6001d' }}>
-                  - {amount} USD
-                </span>
+                <span className={s.spanAmount}>- {amount} USD</span>
               ) : (
-                <span className={s.spanAmount} style={{ color: '#2b824f' }}>
-                  + {amount} USD
-                </span>
+                <span className={s.spanAmount}>+ {amount} USD</span>
               )}
               <span className={s.spanDelete}>
                 <button className={s.deleteBtn} onClick={() => onDelete(_id)}>

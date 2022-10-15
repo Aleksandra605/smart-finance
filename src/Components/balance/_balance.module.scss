@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-  border-radius: 30px;
+  border-radius: $border-radius;
 
   @media (min-width: 320px) {
     margin-left: auto;
@@ -27,10 +27,10 @@
 
 .label {
   height: min-content;
-  color: $color-green;
+  color: $color-font;
   font-weight: 500;
   font-size: 14px;
-  text-shadow: $shadow-text-light;
+  text-shadow: $shadow-text-dark;
 
   @media (min-width: 320px) {
     margin-bottom: 10px;
@@ -48,7 +48,7 @@
   color: $color-font;
   transition: $transition;
   position: relative;
-  border-radius: 30px;
+  border-radius: $border-radius;
   outline: none;
   font-weight: 400;
   background-color: $color-background;
@@ -65,23 +65,57 @@
   width: 110px;
   cursor: pointer;
   border: none;
-  border-radius: 30px;
-  background-color: $color-background-btn;
-  box-shadow: $shadow-btn;
-  text-shadow: $shadow-text-light;
+  outline: none;
+  border-radius: $border-radius;
+  background: transparent;
+  box-shadow: -8px -4px 8px 0px #ffffff, 8px 4px 12px 0px #d1d9e6;
+  overflow: hidden;
+  text-shadow: $shadow-text-dark;
   color: $color-font;
+  font-weight: 500;
   transition: $transition;
   position: relative;
 
-  &:hover {
-    box-shadow: $shadow-btn-hover;
-    color: $color-green;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 80%;
+    width: 90%;
+    background-color: transparent;
+    border-radius: $border-radius;
   }
 
-  &:focus {
-    color: $color-green;
-    box-shadow: $shadow-btn-focus;
+  &:hover {
+    color: $color-violet;
   }
+
+  &:active {
+    transition: all 0.4s ease-in-out;
+    box-shadow: $shadow-btn-focus;
+    color: $color-violet;
+    // background: #00e3e3;
+    // background: linear-gradient(to left, #00e3e3 16%, #c000f0 100%);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+
+    &::after {
+      transform: scale3d(0.975, 0.975, 1) translate3d(0, 10%, 0);
+      opacity: 0;
+    }
+  }
+}
+
+.btn::before {
+  box-shadow: -4px -2px 4px 0px #d1d9e6, 4px 2px 8px 0px #fff;
+}
+
+.btn::after {
+  box-shadow: -4px -2px 4px 0px #fff, 4px 2px 8px 0px #d1d9e6;
+  transform: scale3d(1, 1, 1);
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 .inputBox {

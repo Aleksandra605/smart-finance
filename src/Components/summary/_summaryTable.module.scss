@@ -6,12 +6,12 @@
   background-color: $color-background;
   box-shadow: $shadow-form;
   font-size: 12px;
-  padding: 10px;
+  padding: 20px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   color: $color-font;
-  text-shadow: 1px 1px 0 white;
+  text-shadow: $shadow-text-dark;
 }
 
 .item {
@@ -19,31 +19,6 @@
   justify-content: space-between;
   margin-bottom: 10px;
 }
-
-// .summaryTable {
-//   background-color: $color-background;
-//   box-shadow: $shadow-form;
-//   font-size: 12px;
-//   padding: 10px;
-//   border-top-left-radius: 16px;
-//   border-top-right-radius: 16px;
-//   border-bottom-right-radius: 16px;
-//   color: $color-font;
-//   text-shadow: 1px 1px 0 white;
-// }
-
-// .summaryTitle {
-//   padding: 7px;
-//   text-align: left;
-// }
-
-// td {
-//   padding: 5px;
-// }
-
-// .summaryTitle {
-//   width: 203px;
-// }
 
 .transactionTypeBox {
   display: flex;
@@ -69,7 +44,11 @@
   transition: $transition;
 
   &:hover {
-    fill: $color-rose;
+    fill: $color-violet;
+    box-shadow: $shadow-btn;
+  }
+
+  &:active {
     box-shadow: $shadow-input-active;
   }
 }
@@ -82,4 +61,8 @@
   font-size: 12px;
   color: $color-font;
   font-size: 14px;
+}
+
+.spanAmount {
+  color: $color-violet;
 }

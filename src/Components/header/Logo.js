@@ -3,8 +3,10 @@ import s from './_logo.module.scss';
 function Logo() {
   return (
     <div className={s.logo}>
-      <div className={s.logo__inner}></div>
-      <p className={s.w1}>S</p>
+      <div className={s.logo__inner}>
+        <p className={s.txt}>SF</p>
+      </div>
+      {/* <p className={s.w1}>S</p>
       <p className={s.w2}>m</p>
       <p className={s.w3}>a</p>
       <p className={s.w4}>r</p>
@@ -17,7 +19,7 @@ function Logo() {
       <p className={s.w11}>n</p>
       <p className={s.w12}>c</p>
       <p className={s.w13}>e</p>
-      <p className={s.w14}></p>
+      <p className={s.w14}></p> */}
     </div>
   );
 }

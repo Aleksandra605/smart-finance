@@ -5,10 +5,11 @@
   backdrop-filter: blur(5px);
   padding: 30px;
   border-radius: 16px;
-  border-top-left-radius: 0;
+  // border-top-left-radius: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-shadow: $shadow-form;
 
   @media (min-width: 320px) {
     padding-left: 10px;
@@ -41,8 +42,15 @@
 }
 
 .navigation {
-  display: flexbox;
+  position: relative;
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: $shadow-form;
+  border-radius: $border-radius;
+  margin-bottom: 10px;
+  height: 46px;
 
   @media (min-width: 320px) {
     width: 100%;
@@ -53,9 +61,20 @@
 
   @media (min-width: 768px) {
     position: static;
-    width: auto;
+    width: 296px;
   }
 }
+
+// .indicator {
+//   position: absolute;
+//   height: 40px;
+//   width: 138px;
+//   border-radius: $border-radius;
+//   border: 1px solid red;
+//   margin-left: 0.3rem;
+//   box-shadow: $shadow-input-active;
+//   pointer-events: none;
+// }
 
 .navLink {
   text-decoration: none;
@@ -67,28 +86,41 @@
   font-weight: 500;
   font-size: 12px;
   transition: $transition;
+  color: $color-font;
+
+  &:hover {
+    color: $color-violet !important;
+  }
 
   @media (min-width: 320px) {
     width: 50%;
     box-shadow: $shadow-btn-hover;
-    &:hover,
-    &:focus {
-      box-shadow: $shadow-btn-focus;
-    }
   }
 
   @media (min-width: 768px) {
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
+    border-radius: $border-radius;
     width: 138px;
     box-shadow: none;
-    &:hover,
-    &:focus {
-      box-shadow: none;
-      color: $color-green !important;
-    }
   }
 }
+
+// .navLink1 {
+//   @extend .navLink;
+// }
+
+// .navLink1:focus ~ .indicator {
+//   transform: translateX(0);
+//   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+// }
+
+// .navLink2 {
+//   @extend .navLink;
+// }
+
+// .navLink2:focus ~ .indicator {
+//   transform: translateX(150px);
+//   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+// }
 
 .tdDescr {
   font-size: 8px;

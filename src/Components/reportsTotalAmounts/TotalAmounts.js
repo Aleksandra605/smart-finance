@@ -8,15 +8,15 @@ import { useState, useEffect } from 'react';
 
 function TotalAmounts({ currentYear, totalAmountExp, totalAmountInc }) {
   const [currentAmountExp, setCurrentAmountExp] = useState(
-    totalAmountExp.find((el) => el[0] === currentYear)
-      ? totalAmountExp.find((el) => el[0] === currentYear)[1]
-      : 0
+    totalAmountExp.find(el => el[0] === currentYear)
+      ? totalAmountExp.find(el => el[0] === currentYear)[1]
+      : 0,
   );
 
   const [currentAmountInc, setCurrentAmountInc] = useState(
-    totalAmountInc.find((el) => el[0] === currentYear)
-      ? totalAmountInc.find((el) => el[0] === currentYear)[1]
-      : 0
+    totalAmountInc.find(el => el[0] === currentYear)
+      ? totalAmountInc.find(el => el[0] === currentYear)[1]
+      : 0,
   );
 
   //.......................................................................
@@ -26,14 +26,14 @@ function TotalAmounts({ currentYear, totalAmountExp, totalAmountInc }) {
       return;
     }
     setCurrentAmountExp(
-      totalAmountExp.find((el) => el[0] === currentYear)
-        ? totalAmountExp.find((el) => el[0] === currentYear)[1]
-        : 0
+      totalAmountExp.find(el => el[0] === currentYear)
+        ? totalAmountExp.find(el => el[0] === currentYear)[1]
+        : 0,
     );
     setCurrentAmountInc(
-      totalAmountInc.find((el) => el[0] === currentYear)
-        ? totalAmountInc.find((el) => el[0] === currentYear)[1]
-        : 0
+      totalAmountInc.find(el => el[0] === currentYear)
+        ? totalAmountInc.find(el => el[0] === currentYear)[1]
+        : 0,
     );
   }, [currentYear, totalAmountExp, totalAmountInc]);
 
@@ -43,7 +43,7 @@ function TotalAmounts({ currentYear, totalAmountExp, totalAmountInc }) {
     <div className={s.div2}>
       <p className={s.name}>
         Expenses:
-        <span className={s.spanTotalExp}>
+        <span className={s.span}>
           {currentAmountExp !== 0 ? `- ${currentAmountExp}` : currentAmountExp}
         </span>
       </p>
@@ -58,7 +58,7 @@ function TotalAmounts({ currentYear, totalAmountExp, totalAmountInc }) {
       </svg>
       <p className={s.name}>
         Incomes:
-        <span className={s.spanTotalInc}>
+        <span className={s.span}>
           {currentAmountInc !== 0 ? `+ ${currentAmountInc}` : currentAmountInc}
         </span>
       </p>
@@ -66,7 +66,7 @@ function TotalAmounts({ currentYear, totalAmountExp, totalAmountInc }) {
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   totalAmountExp: getTotalAmountExpense(state),
   totalAmountInc: getTotalAmountIncomes(state),
 });

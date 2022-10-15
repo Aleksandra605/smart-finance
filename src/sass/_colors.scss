@@ -1,32 +1,41 @@
-$color-rose: #e22c7e;
-$color-orange: #fd6e00;
-$color-font: #45504b;
-$color-background: #f9f9f9db;
-$color-background-btn: #fbfbfb;
-$color-red: #d6001d;
-$color-green: #2b824f;
-$color-green-yellow: #badc58;
+$color-pink: #fda7df;
+$color-yellow: #fffa65;
+$color-font: #79819c;
+$color-background: #e7eef7;
+$color-green: #3ae374;
+$color-violet: #7d5fff;
+$color-blue: #18dcff;
+$color-red: #ff3838;
 $color-shadow: #bababa;
 $color-white-shadow: rgba(255, 255, 255, 0.475);
+$color-light-grey: #e7eef7;
+$gradient-icon: radial-gradient(
+  circle farthest-corner at center center,
+  #8eecf5 0%,
+  #f1c0e8 100%
+);
 
 //.........................................................................
 
-$shadow-text-light: 1px 1px 0 white;
-$shadow-text-dark: 1px 1px 1px rgba(0, 0, 0, 0.19);
-$shadow-form: -2px -2px 5px rgba(255, 255, 255, 0.541),
-  3px 3px 5px rgba(0, 0, 0, 0.1);
+$shadow-text-light: 1px 1px 1px white;
+$shadow-text-dark: 1px 1px 1px rgba(0, 0, 0, 0.25);
+$shadow-text-dark2: 3px 3px 3px rgba(0, 0, 0, 0.35);
+$shadow-form: 7px 7px 15px rgba(55, 84, 170, 0.15),
+  -7px -7px 20px rgba(255, 255, 255, 1),
+  inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+  inset 7px 7px 15px rgba(55, 84, 170, 0),
+  inset -7px -7px 20px rgba(255, 255, 255, 0),
+  0px 0px 4px rgba(255, 255, 255, 0) !important;
+
 $shadow-input: inset 2px 2px 5px $color-shadow, inset -5px -5px 10px white;
 $shadow-input-active: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px white;
 $shadow-btn: -2px -2px 5px $color-white-shadow, 2px 2px 5px $color-shadow;
 $shadow-btn-hover: -1px -1px 3px $color-white-shadow, 1px 1px 3px $color-shadow;
 $shadow-btn-focus: inset -2px -2px 4px white, inset 2px 2px 4px $color-shadow;
-$shadow-btn-next: 3px 3px 5px $color-shadow, -3px -3px 7px #ffffff;
-
-//.........................................................................
-
-$background-convex: linear-gradient(145deg, #f6f6f6d4, #e0e0e0d0);
-$background-concave: linear-gradient(145deg, #cacaca, #f0f0f0);
+$shadow-btn-next: 3px 3px 5px $color-shadow, -3px -3px 7px white;
 
 //.........................................................................
 
 $transition: all 0.2s ease-in-out;
+
+$border-radius: 30px;

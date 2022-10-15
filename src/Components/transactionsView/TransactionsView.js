@@ -25,7 +25,7 @@ import useLocalStorage from '../../helpers/useLocalStorage';
 //....................................................................
 
 const TransactionsList = lazy(() =>
-  import('../transactionsList/TransactionsList')
+  import('../transactionsList/TransactionsList'),
 );
 
 //.....................................................................
@@ -40,7 +40,7 @@ function TransactionsView({
 }) {
   const [transactionCurrentTab, setCurrentTab] = useLocalStorage(
     'transactionCurrentTab',
-    'expenses'
+    'expenses',
   );
 
   const { url } = useRouteMatch();
@@ -61,15 +61,19 @@ function TransactionsView({
           }}
           onClick={() => setCurrentTab('expenses')}
           className={s.navLink}
-          style={(isActive) =>
+          style={isActive =>
             viewportWidth > 767
               ? {
-                  backgroundColor: isActive ? '#f9f9f9db' : '#f9f9f971',
-                  color: isActive ? '#2b824f' : '#ebecf0',
+                  boxShadow: isActive
+                    ? 'inset 1px 1px 2px #bababa, inset -1px -1px 2px #ffffff'
+                    : 'none',
+                  color: isActive ? '#886aff' : '#79819c',
                 }
               : {
-                  backgroundColor: '#f9f9f9db',
-                  color: isActive ? '#2b824f' : '#45504b',
+                  boxShadow: isActive
+                    ? 'inset 1px 1px 2px #bababa, inset -1px -1px 2px #ffffff'
+                    : 'none',
+                  color: isActive ? '#886aff' : '#79819c',
                 }
           }
         >
@@ -82,20 +86,25 @@ function TransactionsView({
           }}
           className={s.navLink}
           onClick={() => setCurrentTab('incomes')}
-          style={(isActive) =>
+          style={isActive =>
             viewportWidth > 767
               ? {
-                  backgroundColor: isActive ? '#f9f9f9db' : '#f9f9f971',
-                  color: isActive ? '#2b824f' : '#ebecf0',
+                  boxShadow: isActive
+                    ? 'inset 1px 1px 2px #bababa, inset -1px -1px 2px #ffffff'
+                    : 'none',
+                  color: isActive ? '#886aff' : '#79819c',
                 }
               : {
-                  backgroundColor: '#f9f9f9db',
-                  color: isActive ? '#2b824f' : '#45504b',
+                  boxShadow: isActive
+                    ? 'inset 1px 1px 2px #bababa, inset -1px -1px 2px #ffffff'
+                    : 'none',
+                  color: isActive ? '#886aff' : '#79819c',
                 }
           }
         >
           INCOMES
         </NavLink>
+        {/* <div className={s.indicator}></div> */}
       </nav>
 
       <section className={s.transactionsSection}>
@@ -122,18 +131,18 @@ function TransactionsView({
   );
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   expenses: getExpenses(state),
   incomes: getIncomes(state),
   summaryExpenses: getSummaryExpenses(state),
   summaryIncomes: getSummaryIncomes(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  onDeleteExpense: (data) => {
+const mapDispatchToProps = dispatch => ({
+  onDeleteExpense: data => {
     return dispatch(deleteExpense(data));
   },
-  onDeleteIncome: (data) => {
+  onDeleteIncome: data => {
     return dispatch(deleteIncome(data));
   },
 });
