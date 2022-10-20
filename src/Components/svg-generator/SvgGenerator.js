@@ -155,7 +155,7 @@ export default function SvgGenerator({ name }) {
         <svg
           className={s.deleteIcon}
           aria-hidden="true"
-          viewBox="0 0 32 32"
+          viewBox="0 0 30 32"
           preserveAspectRatio="none"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"

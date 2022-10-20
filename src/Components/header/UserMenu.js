@@ -27,11 +27,12 @@ const UserMenu = ({ name, logout }) => {
   }
   return (
     <div className={s.userMenuBox}>
-      <img
+      <SvgGenerator name="profile" />
+      {/* <img
         src="/images/defaultAvatar.png"
         alt="User avatar"
         className={s.avatar}
-      />
+      /> */}
 
       <button type="button" onClick={logout} className={s.logOutBtn}>
         <SvgGenerator name="logout" />

@@ -12,19 +12,19 @@ function TransactionsList({ data, onDelete }) {
           const { amount, category, description, _id, date } = item;
           return (
             <li key={_id} className={s.transactionCard}>
-              <span className={s.spanDate}>{date}</span>
-              <span className={s.spanDescr}>{description}</span>
+              <div className={s.groupedDateDescr}>
+                <span className={s.spanDate}>{date}</span>
+                <span className={s.spanDescr}>{description}</span>
+              </div>
               <span className={s.spanCategory}>{category}</span>
               {location.pathname === '/transactions/expenses' ? (
                 <span className={s.spanAmount}>- {amount} USD</span>
               ) : (
                 <span className={s.spanAmount}>+ {amount} USD</span>
               )}
-              <span className={s.spanDelete}>
-                <button className={s.deleteBtn} onClick={() => onDelete(_id)}>
-                  <SvgGenerator name="delete icon" />
-                </button>
-              </span>
+              <button className={s.deleteBtn} onClick={() => onDelete(_id)}>
+                <SvgGenerator name="delete icon" />
+              </button>
             </li>
           );
         })}

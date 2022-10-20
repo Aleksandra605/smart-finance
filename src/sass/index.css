@@ -667,10 +667,24 @@ path {
 .deleteIcon {
   display: block;
   position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 19%;
-  left: 24%;
+}
+
+@media (min-width: 320px) {
+  .deleteIcon {
+    width: 16px;
+    height: 18px;
+    top: 3%;
+    left: 18%;
+  }
+}
+
+@media (min-width: 480px) {
+  .deleteIcon {
+    width: 22px;
+    height: 24px;
+    top: 15%;
+    left: 23%;
+  }
 }
 
 @media (min-width: 320px) {
@@ -779,7 +793,6 @@ path {
   background-color: #e7eef7;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  padding: 30px;
   border-radius: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -807,6 +820,7 @@ path {
   .transactionsSection {
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 66px;
   }
 }
 
@@ -815,6 +829,7 @@ path {
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -854,6 +869,7 @@ path {
 }
 
 .navigation {
+  background-color: #e7eef7;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -877,8 +893,6 @@ path {
     inset 7px 7px 15px rgba(55, 84, 170, 0),
     inset -7px -7px 20px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0) !important;
-  border-radius: 30px;
-  margin-bottom: 10px;
   height: 46px;
 }
 
@@ -893,8 +907,10 @@ path {
 
 @media (min-width: 768px) {
   .navigation {
+    border-radius: 30px;
     position: static;
     width: 296px;
+    margin-bottom: 10px;
   }
 }
 
@@ -924,51 +940,19 @@ path {
 
 @media (min-width: 320px) {
   .navLink {
-    width: 50%;
+    width: 47%;
     -webkit-box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.475),
       1px 1px 3px #bababa;
     box-shadow: -1px -1px 3px rgba(255, 255, 255, 0.475), 1px 1px 3px #bababa;
+    border-radius: 30px;
   }
 }
 
 @media (min-width: 768px) {
   .navLink {
-    border-radius: 30px;
     width: 138px;
     -webkit-box-shadow: none;
     box-shadow: none;
-  }
-}
-
-.tdDescr {
-  font-size: 8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.spanDescr {
-  font-weight: 700;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
-.tdCategory {
-  font-size: 8px;
-}
-
-.tdAmount {
-  font-weight: 700;
-}
-
-/*                 TABLET              */
-@media (min-width: 768px) {
-  td {
-    font-size: 12px;
   }
 }
 
@@ -984,11 +968,8 @@ path {
   align-items: center;
   background-color: transparent;
   border: none;
-  width: 35px !important;
-  height: 35px !important;
   outline: none;
   fill: #79819c;
-  height: 100%;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   border-radius: 50%;
@@ -1002,6 +983,22 @@ path {
 .deleteBtn:active {
   -webkit-box-shadow: inset -2px -2px 4px white, inset 2px 2px 4px #bababa;
   box-shadow: inset -2px -2px 4px white, inset 2px 2px 4px #bababa;
+}
+
+@media (min-width: 320px) {
+  .deleteBtn {
+    width: 20px !important;
+    height: 20px !important;
+    margin-left: 7px;
+  }
+}
+
+@media (min-width: 480px) {
+  .deleteBtn {
+    width: 35px !important;
+    height: 35px !important;
+    margin-left: 15px;
+  }
 }
 
 .transactionsList {
@@ -1032,7 +1029,6 @@ path {
 .transactionCard {
   border-radius: 30px;
   color: #79819c;
-  font-weight: 400;
   fill: #79819c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1040,7 +1036,6 @@ path {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 12px;
   padding: 5px 15px 5px 15px;
   letter-spacing: 1px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1063,31 +1058,150 @@ path {
   background-color: #e7eef7;
 }
 
-.spanDate {
-  width: 15%;
+@media (min-width: 320px) {
+  .spanDate {
+    font-size: 8px;
+  }
 }
 
-.spanDescr {
-  width: 30%;
+@media (min-width: 480px) {
+  .spanDate {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .spanDate {
+    font-size: 12px;
+    width: 25%;
+  }
+}
+
+@media (min-width: 320px) {
+  .spanDescr {
+    font-size: 8px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 480px) {
+  .spanDescr {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .spanDescr {
+    font-size: 12px;
+    margin-bottom: 0;
+    width: 65%;
+    text-align: left;
+  }
+}
+
+.groupedDateDescr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 320px) {
+  .groupedDateDescr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .groupedDateDescr {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 45%;
+  }
 }
 
 .spanCategory {
   width: 30%;
+  margin-left: 7px;
+}
+
+@media (min-width: 320px) {
+  .spanCategory {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 480px) {
+  .spanCategory {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .spanCategory {
+    font-size: 12px;
+    margin-left: 15px;
+  }
 }
 
 .spanAmount {
-  width: 15%;
   color: #7d5fff;
+  font-weight: 700;
+  text-align: right;
+  margin-left: 7px;
+}
+
+@media (min-width: 320px) {
+  .spanAmount {
+    font-size: 8px;
+    width: 20%;
+  }
+}
+
+@media (min-width: 480px) {
+  .spanAmount {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .spanAmount {
+    font-size: 12px;
+    margin-left: 15px;
+  }
 }
 
 .spanDelete {
-  width: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  margin-left: 7px;
+}
+
+@media (min-width: 320px) {
+  .spanDelete {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .spanDelete {
+    width: 35px !important;
+    margin-left: 15px;
+  }
 }
 
 .summaryContainer {
@@ -1106,13 +1220,33 @@ path {
     inset 7px 7px 15px rgba(55, 84, 170, 0),
     inset -7px -7px 20px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0) !important;
-  font-size: 12px;
   padding: 20px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   color: #79819c;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 320px) {
+  .summaryContainer {
+    font-size: 10px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 480px) {
+  .summaryContainer {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 768px) {
+  .summaryContainer {
+    font-size: 14px;
+    font-weight: 700;
+  }
 }
 
 .item {
@@ -1129,7 +1263,6 @@ path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 14px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1175,9 +1308,7 @@ path {
   text-align: center;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
   color: #79819c;
-  font-size: 12px;
   color: #79819c;
-  font-size: 14px;
 }
 
 .spanAmount {

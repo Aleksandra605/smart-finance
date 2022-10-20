@@ -3,9 +3,7 @@
 .transactionsSection {
   background-color: $color-background;
   backdrop-filter: blur(5px);
-  padding: 30px;
   border-radius: 16px;
-  // border-top-left-radius: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -14,12 +12,14 @@
   @media (min-width: 320px) {
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 66px;
   }
 
   @media (min-width: 768px) {
     width: 100%;
     padding-left: 30px;
     padding-right: 30px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: 1200px) {
@@ -42,14 +42,13 @@
 }
 
 .navigation {
+  background-color: $color-background;
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   box-shadow: $shadow-form;
-  border-radius: $border-radius;
-  margin-bottom: 10px;
   height: 46px;
 
   @media (min-width: 320px) {
@@ -60,8 +59,10 @@
   }
 
   @media (min-width: 768px) {
+    border-radius: $border-radius;
     position: static;
     width: 296px;
+    margin-bottom: 10px;
   }
 }
 
@@ -93,12 +94,12 @@
   }
 
   @media (min-width: 320px) {
-    width: 50%;
+    width: 47%;
     box-shadow: $shadow-btn-hover;
+    border-radius: $border-radius;
   }
 
   @media (min-width: 768px) {
-    border-radius: $border-radius;
     width: 138px;
     box-shadow: none;
   }
@@ -121,31 +122,3 @@
 //   transform: translateX(150px);
 //   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 // }
-
-.tdDescr {
-  font-size: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-.spanDescr {
-  font-weight: 700;
-  font-size: 12px;
-  margin-bottom: 5px;
-}
-
-.tdCategory {
-  font-size: 8px;
-}
-
-.tdAmount {
-  font-weight: 700;
-}
-
-/*                 TABLET              */
-
-@media (min-width: 768px) {
-  td {
-    font-size: 12px;
-  }
-}
